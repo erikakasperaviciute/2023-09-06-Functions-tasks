@@ -85,6 +85,8 @@ console.log(monthsToMinutes(2));
 
 //Papildomai
 
+//Antra
+
 function timeToReadABook2(booksToRead) {
   let timeForABookInDays = Math.floor(365 / booksToRead);
   let remainingTimeForABookInHours = ((365 % booksToRead) * 24) / booksToRead;
@@ -100,15 +102,42 @@ function timeToReadABook2(booksToRead) {
 
 console.log(timeToReadABook2(20));
 
+//Trečia
+
+function daysToWeek2(days) {
+  let fullWeek = 7;
+  let week = Math.floor(days / fullWeek);
+  let remainingDays = days % fullWeek;
+  let output = "";
+  let remainingDaysToFullWeek = fullWeek - days;
+
+  if (week < 1) {
+    output += `${days} dienos nesudaro pilnos savaitės. Iki pilnos savaitės liko ${remainingDaysToFullWeek} dienos.`;
+  } else {
+    output += `${days} dienos yra ${week} savaitės`;
+    if (remainingDays > 0) {
+      output += ` ir ${remainingDays} dienos.`;
+    } else {
+      output += `.`;
+    }
+  }
+
+  return output;
+}
+
+console.log(daysToWeek2(24));
+
+//Ketvirta
+
 function daysToYears2(days) {
   let fullYear = 365;
-  let year = Math.floor(days / 365);
-  let remainingDays = days % 365;
+  let year = Math.floor(days / fullYear);
+  let remainingDays = days % fullYear;
   let output = "";
   let remainingDaysToFullYear = fullYear - days;
 
   if (year < 1) {
-    output += `${days} nesudaro pilnų metų. Iki pilnų metų liko ${remainingDaysToFullYear} dienos.`;
+    output += `${days} dienos nesudaro pilnų metų. Iki pilnų metų liko ${remainingDaysToFullYear} dienos.`;
   } else {
     output += `${days} dienos yra ${year} metai`;
     if (remainingDays > 0) {

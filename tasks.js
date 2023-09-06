@@ -77,7 +77,7 @@ console.log(monthsToHours(4));
 
 function monthsToMinutes(months) {
   let minutes = months * (365 / 12) * 24 * 60;
-  let output = `${months} mėnesiai turi ${minutes} valandas.`;
+  let output = `${months} mėnesiai turi ${minutes} minutes.`;
   return output;
 }
 

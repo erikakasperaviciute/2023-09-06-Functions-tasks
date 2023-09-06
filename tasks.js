@@ -82,3 +82,43 @@ function monthsToMinutes(months) {
 }
 
 console.log(monthsToMinutes(2));
+
+//Papildomai
+
+function timeToReadABook2(booksToRead) {
+  let timeForABookInDays = Math.floor(365 / booksToRead);
+  let remainingTimeForABookInHours = ((365 % booksToRead) * 24) / booksToRead;
+  let output = `Norint perskaityti ${booksToRead} knygų per metus, vienai knygai perskaityti turėsi ${timeForABookInDays} dienas`;
+
+  if (remainingTimeForABookInHours > 0) {
+    output += ` ir ${remainingTimeForABookInHours} valandų.`;
+  } else {
+    output += `.`;
+  }
+  return output;
+}
+
+console.log(timeToReadABook2(20));
+
+function daysToYears2(days) {
+  let fullYear = 365;
+  let year = Math.floor(days / 365);
+  let remainingDays = days % 365;
+  let output = "";
+  let remainingDaysToFullYear = fullYear - days;
+
+  if (year < 1) {
+    output += `${days} nesudaro pilnų metų. Iki pilnų metų liko ${remainingDaysToFullYear} dienos.`;
+  } else {
+    output += `${days} dienos yra ${year} metai`;
+    if (remainingDays > 0) {
+      output += ` ir ${remainingDays} dienų.`;
+    } else {
+      output += `.`;
+    }
+  }
+
+  return output;
+}
+
+console.log(daysToYears2(368));

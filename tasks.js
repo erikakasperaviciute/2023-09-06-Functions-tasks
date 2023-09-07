@@ -69,7 +69,7 @@ function monthsToHours(months) {
   return output;
 }
 
-console.log(monthsToHours(4));
+console.log(monthsToHours(5));
 
 // 7. Funkciją, kuri konvertuoja mėnesius į minutes:
 // 7.1. Funkcija priima vieną argumentą: mėnesių skaičių.
